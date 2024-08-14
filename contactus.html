@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactus.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/181ea7bd20.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("8da76KOJU_jejiw3z"); // Initialize EmailJS with your user ID
+    })();
+  </script>
+
+</head>
+<body>
+
+<!-- Navbar section -->
+<header></header>
+
+<!-- Main section -->
+<div class="main">
+  <div class="basesection">
+    <div class="second-section">
+      <div class="second-section d-flex justify-content-center">
+        <h2 style="font-size:clamp(1rem,10vw,38px);padding:30px; font-family: 'Cinzel Decorative', serif;" class="text-center">Reydon Resources Private Limited</h2>
+      </div>
+      <div class="maincontactus mb-5">
+        <section class="contact-info" data-aos="fade-left">
+          <div class="contact-info-con p-3">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, please feel free to contact us.</p>
+            <ul>
+              <li><a href="mailto:reydonrpl@gmail.com"><strong><i class="fa fa-envelope" aria-hidden="true"></i> Email:</strong> reydonrpl@gmail.com</a></li>
+              <li><strong><i class="fa-solid fa-phone"></i> Phone:</strong> 7708943894, 9042439980</li>
+              <li><strong><i class="fa-solid fa-location-dot"></i> Address:</strong></li>
+              <address style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;">
+                Reydon Resources Private Limited,<br>
+                D.NO.28-East, L.S Nagar,<br>
+                Mathakottai Road, Serfoji College Post,<br>
+                Thanjavur Dist-613005, Tamilnadu.
+              </address>
+            </ul>
+            <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;">
+              <strong style="font-size: 15px;"><i class="fa fa-globe" aria-hidden="true"></i> Website:</strong>
+              <a href="http://www.reydon.in" target="_blank"> www.reydon.in</a>
+            </p>
+          </div>
+        </section>
+        
+        <section class="contact-form" data-aos="fade-right">
+          <h2>Get in Touch</h2>
+          <form id="contactForm" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone No:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select</option>
+              <option value="services">Services</option>
+              <option value="sales_enquiry">Sales Enquiry</option>
+              <option value="residential_plots">Residential Plots / Building</option>
+              <option value="commercial_plots">Commercial Plots / Building</option>
+              <option value="property_management">Property Management</option>
+              <option value="interior_design">Reydon Interior Design Furniture</option>
+              <option value="service_complaint">Service Complaint</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" id="sendMessage">Send Message</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="footercontent"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Fetch footer and navbar
+    fetch("./footer.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to fetch footer");
+        return response.text();
+      })
+      .then(html => {
+        document.querySelector(".footercontent").innerHTML = html;
+      })
+      .catch(err => console.log(err));
+
+    fetch("./navbar.html")
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to fetch navbar");
+        return response.text();
+      })
+      .then(html => {
+        document.querySelector("header").innerHTML = html;
+        const menubutton = document.querySelector('.menuiconc');
+        const navmenu = document.querySelector('nav ul');
+        if (menubutton && navmenu) {
+          menubutton.addEventListener('click', () => {
+            navmenu.classList.toggle('show');
+          });
+        } else {
+          console.log("Navbar and menu button not found");
+        }
+      })
+      .catch(err => console.log(err));
+
+    // Initialize EmailJS
+    emailjs.init("8da76KOJU_jejiw3z");
+  });
+
+  const Name = document.getElementById("name");
+  const form = document.getElementById("contactForm");
+          const PhoneNumber = document.getElementById("phone");
+          const Email = document.getElementById("email");
+          const locationValue = document.getElementById("location");
+          const Subject = document.getElementById("subject");
+          const Message = document.getElementById("message");
+          const SubmitButton = document.getElementById("sendMessage");
+
+  function checkFormValidity() {
+  if (
+    Name.value.trim() !== '' &&
+    PhoneNumber.value.trim() !== '' &&
+    Email.value.trim() !== '' &&
+    locationValue.value.trim() !== '' &&
+    Subject.value.trim() !== '' &&
+    Message.value.trim() !== ''
+  ) {
+    SubmitButton.disabled = false; // Enable the button
+  } else {
+    SubmitButton.disabled = true; // Disable the button
+  }
+}
+
+// Attach event listeners to form fields to check validity on each change
+[Name, PhoneNumber, Email, locationValue, Subject, Message].forEach(field => {
+  field.addEventListener('input', checkFormValidity);
+});
+
+// Initially check form validity on page load
+checkFormValidity();
+
+
+SubmitButton.addEventListener("click", (e)=>{
+    e.preventDefault(); // Prevent the form from submitting
+        const sheetData = {
+          Name: Name.value,
+          PhoneNumber: PhoneNumber.value,
+          Email: Email.value,
+          Location: locationValue.value,
+          Subject: Subject.value,
+          Message: Message.value
+        }
+        document.getElementById("contactForm").reset();
+        submitData(sheetData); 
+    });
+
+    async function submitData(sheetData) {
+    try {
+        await storeDataInGoogleSheet(sheetData);
+        //alert('Data submitted successfully');
+    } catch (error) {
+        console.error('Error storing data in Google Sheets:', error);
+    }
+}
+    
+    async function storeDataInGoogleSheet(formData) {
+    const sheetDbUrl = 'https://sheetdb.io/api/v1/bfsipyt3rwvg6';
+    
+    try {
+        const response = await fetch(sheetDbUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Error sending data: ' + response.statusText);
+        }
+
+        const data = await response.json();
+        console.log('Data sent successfully', data);
+
+    } catch (error) {
+        console.error('Request failed', error);
+    }
+}
+
+</script>
+
+</body>
+</html>

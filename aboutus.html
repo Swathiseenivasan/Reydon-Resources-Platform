@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link rel="stylesheet" href="aboutus.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Playfair+Display:wght@700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/181ea7bd20.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+    
+        fetch("./footer.html").then(response=>{
+            if(!response.ok){
+                throw new Error("not fetech")
+            }
+            return response.text();
+          }).then(html=>{
+            document.querySelector(".footercontent").innerHTML=html
+          })
+          .catch(err=>{
+            console.log(err)
+          })
+         })
+          //navbar
+          document.addEventListener("DOMContentLoaded", () => {
+            fetch("./navbar.html").then(response => {
+              if (!response.ok) {
+                throw new Error("not fetech")
+              }
+              return response.text();
+            }).then(html => {
+              
+              document.querySelector("header").innerHTML = html
+              const menubutton=document.querySelector('.menuiconc')
+              const navmenu=document.querySelector('nav ul')
+              if (menubutton && navmenu){
+                menubutton.addEventListener('click',()=>{
+                  navmenu.classList.toggle('show')
+                })
+              }
+              else{
+                console.log("not found navbar and menubtn")
+              }
+            })
+              .catch(err => {
+                console.log(err)
+              })
+          })
+
+ </script>
+</head>
+<body>
+
+            <!-- navbar section -->
+             <header></header>
+            <!-- mainsection -->
+            <div class="main">
+              <div class="basesection">
+          <section>
+            <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="2500">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample" data-slide-to="1"></li>
+                <li data-target="#carouselExample" data-slide-to="2"></li>
+                <li data-target="#carouselExample" data-slide-to="3"></li>
+                <li data-target="#carouselExample" data-slide-to="4"></li>
+                <li data-target="#carouselExample" data-slide-to="5"></li>
+              </ol>
+  
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="slider-in-con1 slider-img-con">
+                    <div class="innercontent">
+                      <h2 class="mb-1 innerheadsec">Welcome to</h2>
+                      <h3 class="innerheadsec">Reydon Resources Private Limited</h3>
+                      <h4 class="mt-4">Where your real estate dreams become reality</h4>
+                      <div class="in-con-btn mt-5">
+                        <a href=""><button><span>Learn More</span></button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel-item">
+                  <div class="slider-in-con2 slider-img-con">
+                    <div class="innercontent">
+                      <h2 class="mb-1">Our Mission</h2>
+                      <h4 class="mt-4">Provide exceptional real estate services that exceed expectations</h4>
+                      <div class="in-con-btn mt-4">
+                        <a href=""><button><span>Discover Our Mission</span></button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel-item">
+                  <div class="slider-in-con3 slider-img-con">
+                    <div class="innercontent">
+                      <h2 class="mb-1">What We Do</h2>
+                      <h4 class="mt-4">Comprehensive range of real estate services tailored to you</h4>
+                      <div class="in-con-btn mt-4">
+                        <a href=""><button><span>Explore Our Services</span></button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                
+                <div class="carousel-item">
+                  <div class="slider-in-con4 slider-img-con">
+                    <div class="innercontent">
+  
+                      <h2 class="mb-1">Our values</h2>
+  
+                    <h4 class="mt-4"> Integrity, excellence, innovation, and client-focused real estate solutions</h4>
+                    <div class="in-con-btn mt-4">
+                      <a href=""><button><span>Know More</span></button></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel-item">
+                  <div class="slider-in-con5 slider-img-con">
+                    <div class="innercontent">
+                      <h2 class="mb-1">Innovative Real Estate Solutions </h2>
+                    <h4 class="mt-4">  Transforming real estate dreams into reality <br> with innovation and expertise.
+                    </h4>
+                    <div class="in-con-btn mt-4">
+                      <a href=""><button><span>Know More</span></button></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+  
+  
+                <div class="carousel-item">
+                  <div class="slider-in-con6 slider-img-con">
+                    <div class="innercontent">
+                      <h2 class="mb-1">Expert Guidance, Every Step </h2>
+                    <h4 class="mt-4">  Reliable expertise for all your real estate <br> and property management needs.
+  
+                    </h4>
+                    <div class="in-con-btn mt-4">
+                      <a href=""><button><span>Know More</span></button></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+  
+              
+              </div>
+  
+              <!-- Controls -->
+              <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </section>
+        </div>
+    
+     
+    <section class="aboutus">
+
+        <div class="about1">
+            <div class="innerabout1">
+               <div class="abouthead headline">
+                <h2>About us</h2>
+               </div>
+                <p class="mt-3">
+                    Welcome to <strong>"Reydon Resources Private Limited"</strong>, where your Real-estate dreams become reality. we are your trusted partner in real estate and allied trading & services. With years of experience and a deep understanding of the market, we are dedicated to helping you navigate the complexities of buying, selling, and managing properties. 
+                </p>
+            </div>
+        </div>
+
+        <div class="whom">
+            <div class="innerwhom">
+                <div class="whomhead headline">
+                    <h2>Whom We Are</h2>
+                </div>
+                <p class="mt-3">Founded in 2024, "Reydon Resources Private Limited” has grown to become a trusted name in the real estate industry. Our team of experts is passionate about real estate and trading services, committed to delivering personalized solutions tailored to your unique needs. We pride ourselves on our integrity, built on trust, transparency, and dedication to client satisfaction. </p>
+            </div>
+        </div>
+
+
+        <div class="visionmission mt-5">
+          <div class="vision">
+              <div class="visioninner">
+                 <span>
+                  <h2 > <img src="./img2/VISSION.jpg" alt="" width="200px" height="145px">   </h2>
+                  <img src="./img2/VISION.png" alt="" width="500" height="520">
+                  <!--<div class="line"></div>
+                  <p>To be the leading provider of comprehensive real estate and allied services, delivering unparalleled value and exceptional experiences to our clients through innovative solutions, unwavering integrity, and a commitment to excellence. </p>-->
+                 </span>
+              </div>
+              </div>
+          <div class="mission">
+             <div class="missioninner">
+              <span>
+                  <h2><img src="./IMG/mission.jpg" alt="" width="200px" height="140px">  </h2>
+                  <img src="./img2/MISSION.png" alt="" width="500" height="530">
+                 <!--<div class="line"></div>-->
+              <!--<p>"Our mission is to provide exceptional real estate and allied services that exceed our clients' expectations by delivering innovative, personalized solutions with integrity and excellence. We strive to shape the future of the industry by setting new standards in quality, sustainability, and customer satisfaction.”</p>-->
+              </span>
+             </div>
+          </div>
+      '</div>
+
+
+        <div class="Policy text-center  mt-4  mb-5">
+          <img src="./img2/QUALITYPOLICY.png" alt="" width="400px">
+           <!-- <p>We are committed to delivering the highest quality real estate and allied services by prioritizing client satisfaction, innovation, integrity and transparency in all transactions. We continuously strive for excellence and a culture of continuous improvement to exceed client expectations.</p> -->
+      </div>
+    </section>
+   
+</div>
+<div class="footercontent">
+
+</div>
+</body>
+</html>
