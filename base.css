@@ -63,7 +63,7 @@ header {
     padding: 0px 10px;
     z-index: 999;
     background: #F2F2F2;
-    position: static !important;
+    position: sticky !important;
     top: 0;
    
   }
